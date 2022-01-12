@@ -8,13 +8,13 @@ namespace Poc
     public class Function
     {
         [Function("Function")]
-        public async Task<HttpResponseData> RunAsync(
+        public async Task<Output> RunAsync(
             [HttpTrigger(AuthorizationLevel.Function, "delete", Route = "test")] HttpRequestData req
         )
         {
             var response = req.CreateResponse(HttpStatusCode.OK);
             await response.WriteStringAsync("Test");
-            return response;
+            return new Output { Response = response };
         }
     }
 }
