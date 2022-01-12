@@ -46,8 +46,6 @@ namespace Poc
                     .SetValue(functionBindingsFeature, new Dictionary<string, object> {
                         { "Response", response }
                     });
-
-                return;
             }
             else
             {
