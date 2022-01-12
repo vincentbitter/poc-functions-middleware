@@ -9,7 +9,7 @@ namespace Poc
     {
         [Function("Function")]
         public async Task<Output> RunAsync(
-            [HttpTrigger(AuthorizationLevel.Function, "delete", Route = "test")] HttpRequestData req
+            [HttpTrigger(AuthorizationLevel.Function, "get", Route = "test")] HttpRequestData req
         )
         {
             var response = req.CreateResponse(HttpStatusCode.OK);
